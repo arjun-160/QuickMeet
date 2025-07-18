@@ -4,6 +4,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { connectToSocket } from "./controllers/socketManager.js";
 import userRoutes from "./routes/users.routes.js";
+import dotenv from 'dotenv';
+dotenv.config();
+const dbUrl = process.env.ATLASDB_URL;
 
 const app = express();
 const server = createServer(app);
@@ -33,7 +36,7 @@ mongoose.connection.on("disconnected", () => {
 // Start server and connect to MongoDB
 const start = async () => {
   try {
-    await mongoose.connect("mongodb+srv://arjun:vasudevan2014@quickmeet.xnrgx8g.mongodb.net/", {
+    await mongoose.connect(dbUrl, {
       
     });
 
