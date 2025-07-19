@@ -194,6 +194,31 @@ export default function Authentication() {
                 {formState === 0 ? 'Log In' : 'Register'}
               </Button>
             </Box>
+            {/* Test Credentials Box */}
+            <Box
+              sx={{
+                mt: 3,
+                p: 2,
+                border: '2px dashed #1976d2',
+                borderRadius: 2,
+                backgroundColor: '#e3f2fd',
+                color: '#0d47a1',
+                width: '100%',
+                maxWidth: 360,
+                textAlign: 'center',
+                boxShadow: 1,
+              }}
+            >
+              <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 1 }}>
+                Test Credentials
+              </Typography>
+              <Typography variant="body2">
+                <strong>Username:</strong> test
+              </Typography>
+              <Typography variant="body2">
+                <strong>Password:</strong> 123
+              </Typography>
+            </Box>
           </Box>
         </Grid>
       </Grid>
